@@ -19,7 +19,14 @@ class StringCalculator
 	    int_array.reduce(0){|sum,i| sum+i} #for summation
   end
 
-   def check_negatives
-   	  return false
+# in the previous commit, I only added the definition, now implementing logic as it fails 
+    def check_negatives num
+  	   i=0
+       num.each{|x| i+=1 if(x<0)}
+       if i==0
+       	return false
+       else
+       	return num.select{|x| x<0}.join(',')
+        end
    end
 end
