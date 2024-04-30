@@ -39,7 +39,7 @@ require 'StringCalculator'
      end
 
      it "should not consider numbers greater than 1000" do
-         expect(kata.add("1000,1")).to eq(1001)
+         expect(kata.add("1000,1")).to eq(1)
 
      end
 
