@@ -29,5 +29,13 @@ require 'StringCalculator'
      it "should return the sum if the delimiter is other than comma" do
      	 expect(kata.add("1\n2,3")).to eq(6)
      end
+     
+     it "should take care of multiple delimiters" do
+     expect(kata.add("//;\n1;2")).to eq(3)
+     end
+
+     it "should not handle negatives at all" do
+     	expect{kata.add("1,-2,-2")}.to raise_error(RuntimeError)
+     end
 
      end
