@@ -38,4 +38,9 @@ require 'StringCalculator'
      	expect{kata.add("1,-2,-2")}.to raise_error(RuntimeError)
      end
 
+     it "should not consider numbers greater than 1000" do
+         expect(kata.add("1000,1")).to eq(1001)
+
+     end
+
      end
