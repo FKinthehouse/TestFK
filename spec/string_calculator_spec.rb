@@ -21,5 +21,13 @@ require 'StringCalculator'
      it "should return the same if no delimiters" do
         expect(kata.add('999')).to eq(999)
      end
- 
+
+     it "should return sum if delimiter is comma only" do
+     	 expect(kata.add('999,0')).to eq(999)
+     end
+     
+     it "should return the sum if the delimiter is other than comma" do
+     	 expect(kata.add("1\n2,3")).to eq(6)
+     end
+
      end
