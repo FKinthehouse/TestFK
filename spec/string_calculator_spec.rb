@@ -14,7 +14,12 @@ require 'StringCalculator'
      	expect {kata.add([55,56])}.to raise_error(RuntimeError)
      end
      
- 
-
+     it "should return 0 for empty String" do
+     	expect(kata.add("")).to eq(0)
+     end
+  
+     it "should return the same if no delimiters" do
+        expect(kata.add('999')).to eq(999)
+     end
  
      end
